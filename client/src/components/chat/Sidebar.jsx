@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { useChat } from '../../context/ChatContext';
-import { LogOut, Plus, Search, Edit, Settings } from 'lucide-react';
+import { LogOut, Plus, Search, Edit, Info } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { auth, db } from '../../services/firebase';
 import { signOut } from 'firebase/auth';
@@ -161,8 +161,8 @@ export default function Sidebar() {
       <div className="flex items-center justify-between mb-4 shrink-0 px-2">
         <h1 className="text-[28px] font-bold tracking-tight text-white">Chatify</h1>
         <div className="flex items-center gap-4">
-          <button onClick={() => navigate('/about')} className="text-white/80 hover:text-white transition-colors">
-            <Settings size={22} strokeWidth={2} />
+          <button onClick={() => navigate('/about')} className="text-white/80 hover:text-white transition-colors" title="About & Developer">
+            <Info size={22} strokeWidth={2} />
           </button>
           <button onClick={handleLogout} className="text-white/80 hover:text-white transition-colors">
             <LogOut size={22} strokeWidth={2} />
