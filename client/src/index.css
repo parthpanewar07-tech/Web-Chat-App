@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-black: #121212;
+  --color-white: #FFFFFF;
+  --color-accent-red: #E50914;
+  --color-accent-gold: #D4AF37;
+  --color-bubble-received: #2A2A2A;
+  --color-bubble-sent: #1A1A1A;
+}
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+  }
+
+  body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    overscroll-behavior-y: none;
+  }
+}
